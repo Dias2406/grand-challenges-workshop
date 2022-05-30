@@ -2,8 +2,11 @@
 In this step-by-step tutorial, I’ll show you exactly how to install XAMPP and set up a local WordPress development site. I’ll also share some common XAMPP errors and troubleshooting tips so that you can fix any problems you encounter
 ## Step 1: Install Xampp
 First step in the way is to download XAMPP on your computer: https://www.apachefriends.org/index.html
+
 You will need to download a version of XAMPP according to your OS.
+
 Once the download finishes, run the file to launch the XAMPP installer.
+
 **MacOS** users may encounter a problem with installing XAMPP. You may see this error:
 
 ![image](https://user-images.githubusercontent.com/75443246/171028198-37fdb8f0-d44e-4bd3-b193-7092b321f34e.png)
@@ -54,12 +57,18 @@ Navigate to phpAdmin on your Dashboard page:
 
 ![image](https://user-images.githubusercontent.com/75443246/171031002-53cb9915-002e-4d85-91d6-08be40c04834.png)
 
-### If you have PhpMyAdmin Access Forbidden Error
-1. Open XAMPP by click the XAMPP app icon in macOS Finder —> Applications folder.
-2. Click Volumes tab —> Mount button to mount /opt/lampp volume.
-3. Click Explore button to open /opt/lampp folder in macOS Finder.
-4. Open etc / extra folder, edit httpd-xampp.conf file.
-5. 
+### If you have PhpMyAdmin Access Forbidden Error 
+1. **MacOS** users:
+- Click Volumes tab —> Mount button to mount /opt/lampp volume.
+- Click Explore button to open /opt/lampp folder in macOS Finder.
+    
+   **Windows** users: Click Explorer button to open /opt/lampp
+2. Open etc/extra folder, edit httpd-xampp.conf file.
+3. Comment line which load Perl module.
+```
+#LoadModule perl_module        modules/mod_perl.so
+```
+4. Change Directory “/opt/lampp/phpmyadmin” access permission as below.
 ```
 # since XAMPP 1.4.3
 <Directory "/opt/lampp/phpmyadmin">
@@ -71,10 +80,26 @@ Navigate to phpAdmin on your Dashboard page:
     ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
 </Directory>
 ```
-## Step 4: install Wordpress on virtual machine
-`wget https://wordpress.org/latest.tar.gz`
-Then extract the package using:
-`tar -xzvf latest.tar.gz`
+
+Then click on Databases at the top:
+
+![image](https://user-images.githubusercontent.com/75443246/171031144-f516dbe0-ccde-42f8-b4a6-bd5fd8db8594.png)
+
+And enter a name for your database and click Create. Your name can be anything (like Wordpress) – just remember it because you’ll need it for the next step:
+
+![image](https://user-images.githubusercontent.com/75443246/171031184-c7262d6e-163f-4ab2-a678-bf944914203d.png)
+
+## Step 4: Download and add Wordpress files
+First, you need to download Wordpress archive on youe local PC: https://wordpress.org/download/
+
+Now you need to open file directory of your server:
+**MacOS** users:
+- Click Volumes tab —> Mount button to mount /opt/lampp volume.
+- Click Explore button to open /opt/lampp folder in macOS Finder.
+    
+**Windows** users: Click Explorer button to open /opt/lampp
+
+Then open htdocs directory and create new folder (name it Wordpress). Copy all unarchived Wordpress files to the new folder.
 ## Step 5: add wordpress files to root directory (htdocs in Xampp)
 ## Step 6: create database and user using phpMyAdmin
 ## Step 7: Set up wp-config.php (enter your database name, username, password)
