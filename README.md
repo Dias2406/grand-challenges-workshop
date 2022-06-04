@@ -133,3 +133,6 @@ Then create your new Wordpress account and name your new Website:
 ![image](https://user-images.githubusercontent.com/75443246/171046027-8fb0e52a-1c88-43ce-94ee-748bebe371ca.png)
 
 ## Step 7: Test the features of the Wordpress
+
+## Step 8: (Optional) Download Plugins
+
