@@ -80,7 +80,7 @@ First, you need to download Wordpress archive on youe local PC: https://wordpres
 
 Now you need to open file directory of your server:
 
-- Click Explorer button to open /opt/lampp
+- Click "Explorer" or "Open Application folder" button in Xampp to open /opt/lampp
 - Then open htdocs directory and create new folder (name it **wordpress**). Copy all unarchived Wordpress files to the new folder.
 ## Step 5: Install WordPress locally via the on-screen installer
 Now open your Wordpress site, which is:
@@ -110,7 +110,7 @@ Then create your new Wordpress account and name your new Website:
 ## Step 7: Test the features of the Wordpress
 
 ## Step 8: (Optional) Download Plugins and Themes
-1. Click Explorer button to open /opt/lampp
+1. Click "Explorer" or "Open Application folder" button to open /opt/lampp
 2. Navigate to htdocs/wordpress and open wp-config.php
 3. Add this line of code to the file:
 ```
