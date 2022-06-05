@@ -1,19 +1,13 @@
 # Workshop
 In this step-by-step tutorial, I’ll show you exactly how to install XAMPP and set up a local WordPress development site. I’ll also share some common XAMPP errors and troubleshooting tips so that you can fix any problems you encounter
 ## Step 1: Install Xampp
-First step in the way is to download XAMPP on your computer: https://www.apachefriends.org/index.html
+First step in the way is to download XAMPP on your computer: 
 
-You will need to download a version of XAMPP according to your OS.
+**Note:** Windows users use this link: https://www.apachefriends.org/index.html
+
+**Note:** MacOS users should use this link: https://sourceforge.net/projects/xampp/files/XAMPP%20Mac%20OS%20X/8.1.6/ and download xampp-osx-8.1.6-0-installer.dmg
 
 Once the download finishes, run the file to launch the XAMPP installer.
-
-**MacOS** users may encounter a problem with installing XAMPP. You may see this error:
-
-![image](https://user-images.githubusercontent.com/75443246/171028198-37fdb8f0-d44e-4bd3-b193-7092b321f34e.png)
-
-Apple does not trust this application, because it was downloaded from the internet. To solve this problem navigate to Settings -> Security and Privacy -> General. There you can grant access to open XAMPP installer:
-
-![image](https://user-images.githubusercontent.com/75443246/171028583-4fe785a7-1bf9-4365-aedc-7bc5a1d224ae.png)
 
 ## Step 2: Start the modules and test your server
 To install XAMPP and WordPress properly, you’ll need to run two modules:
@@ -28,18 +22,14 @@ Once you launch them, you should see their status turn to green:
 
 ![image](https://user-images.githubusercontent.com/75443246/171029605-0c0f010c-298a-417e-8b15-d27fdcbf3fd2.png)
 
-For MacOS users:
+For **MacOS** users:
 
-Click Start on the General section and wait until the status turns to green:
+Click on Manage servers section and start Apache and MySQL services:
 
-![image](https://user-images.githubusercontent.com/75443246/171029810-dd83c232-ed74-4926-a7b0-91fbb6ada956.png)
-
-Then go to Services section and start Apache and MySQL services:
-
-![image](https://user-images.githubusercontent.com/75443246/171029927-5bef1b9b-0836-40d4-b2e3-f4a7282dc7f1.png)
+![image](https://user-images.githubusercontent.com/75443246/172062019-fb5e0ff1-6849-49c3-866e-590ad46c2daf.png)
 
 ## Step 2: Navigate to your local service
-Now you should be able to test that your local server is working by going to http://localhost/ (**Windows** users) in your web browser of choice or click on "Go To Application" in General section (**MacOS** users):
+Now you should be able to test that your local server is working by going to http://localhost/:
 
 ![image](https://user-images.githubusercontent.com/75443246/171030234-83f069d1-7635-4c41-a1a2-8ae333d56e35.png)
 
@@ -57,12 +47,8 @@ Navigate to phpAdmin on your Dashboard page:
 
 ![image](https://user-images.githubusercontent.com/75443246/171031002-53cb9915-002e-4d85-91d6-08be40c04834.png)
 
-### If you have PhpMyAdmin Access Forbidden Error 
-1. **MacOS** users:
-- Click Volumes tab —> Mount button to mount /opt/lampp volume.
-- Click Explore button to open /opt/lampp folder in macOS Finder.
-    
-   **Windows** users: Click Explorer button to open /opt/lampp
+### If you get PhpMyAdmin Access Forbidden Error follow these steps:
+1. Click Explorer button to open /opt/lampp
 2. Open etc/extra folder, edit httpd-xampp.conf file.
 3. Comment line which load Perl module.
 ```
@@ -94,21 +80,10 @@ First, you need to download Wordpress archive on youe local PC: https://wordpres
 
 Now you need to open file directory of your server:
 
-**MacOS** users:
-- Click Volumes tab —> Mount button to mount /opt/lampp volume.
-- Click Explore button to open /opt/lampp folder in macOS Finder.
-    
-**Windows** users: Click Explorer button to open /opt/lampp
-
-Then open htdocs directory and create new folder (name it **wordpress**). Copy all unarchived Wordpress files to the new folder.
+- Click Explorer button to open /opt/lampp
+- Then open htdocs directory and create new folder (name it **wordpress**). Copy all unarchived Wordpress files to the new folder.
 ## Step 5: Install WordPress locally via the on-screen installer
 Now open your Wordpress site, which is:
-
-**MacOS** users:
-
-http://[ip adress]/wordpress
-
-**Windows** users:
 
 http://localhost/wordpress
 
@@ -134,5 +109,14 @@ Then create your new Wordpress account and name your new Website:
 
 ## Step 7: Test the features of the Wordpress
 
-## Step 8: (Optional) Download Plugins
+## Step 8: (Optional) Download Plugins and Themes
+1. Click Explorer button to open /opt/lampp
+2. Navigate to htdocs/wordpress and open wp-config.php
+3. Add this line of code to the file:
+```
+define( 'FS_METHOD', 'direct' );
+```
+4. Go to htdocs directory, right click on wordpress folder and click on "Get Info"
+5. Change the privilages to "Read and write" and apply to all enclosed items
 
+![image](https://user-images.githubusercontent.com/75443246/172061973-03652571-7d6c-43c1-9011-ee30a957d290.png)
