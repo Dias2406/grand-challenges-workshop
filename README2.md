@@ -45,7 +45,7 @@ Next, you need to create a MySQL database for your WordPress. To do that, launch
 **MacOS** users:
 Navigate to phpAdmin on your Dashboard page:
 
-![image](https://user-images.githubusercontent.com/75443246/171031002-53cb9915-002e-4d85-91d6-08be40c04834.png)
+![image](https://user-images.githubusercontent.com/75443246/172154947-bd5e8708-8ba1-4e8f-9362-ac29e7f94c64.png)
 
 ### If you get PhpMyAdmin Access Forbidden Error follow these steps:
 1. Click Explorer button to open /opt/lampp
