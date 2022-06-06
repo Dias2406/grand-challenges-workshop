@@ -120,3 +120,8 @@ define( 'FS_METHOD', 'direct' );
 5. Change the privilages to "Read and write" and apply to all enclosed items
 
 ![image](https://user-images.githubusercontent.com/75443246/172061973-03652571-7d6c-43c1-9011-ee30a957d290.png)
+
+
+You can niw use plugins and themes to make your Wev development easier and user-friendly.
+
+Try and install Storefront theme with the combination of WooCommerce plugin!
