@@ -122,6 +122,6 @@ define( 'FS_METHOD', 'direct' );
 ![image](https://user-images.githubusercontent.com/75443246/172061973-03652571-7d6c-43c1-9011-ee30a957d290.png)
 
 
-You can niw use plugins and themes to make your Wev development easier and user-friendly.
+You can now install plugins and themes to make your Wev development easier and user-friendly.
 
 Try and install Storefront theme with the combination of WooCommerce plugin!
