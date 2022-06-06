@@ -10,7 +10,7 @@ First step in the way is to download XAMPP on your computer:
 Once the download finishes, run the file to launch the XAMPP installer.
 
 ## Step 2: Start the modules and test your server
-To install XAMPP and WordPress properly, you’ll need to run two modules:
+To run WordPress on XAMPP properly, you’ll need to run two modules:
 - Apache
 - MySQL
 
