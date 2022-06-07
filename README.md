@@ -1,4 +1,4 @@
-# A Tutorial ebsite for building a Wordpress web app 
+# A tutorial website for building a Wordpress web app 
 
 This project was developed to support the University of Exeter Grand Challenges initiative in 2022. The session was designed as a tutorial to give teams an insight into how to build a Web App. The session was designed for non-programmers to walk through configuration and installation of a local Wordpress installation that provides a powerful platform for building web applications to support and prototype the students' ideas for Grand Challenges solutions. 
 
