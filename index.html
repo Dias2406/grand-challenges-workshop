@@ -1,79 +1,246 @@
-<h1 id="workshop">Workshop</h1>
-<p>In this step-by-step tutorial, I’ll show you exactly how to install XAMPP and set up a local WordPress development site. I’ll also share some common XAMPP errors and troubleshooting tips so that you can fix any problems you encounter</p>
-<h2 id="step-1-install-xampp">Step 1: Install Xampp</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="description" content="A workshop on howto build an app using the Wordpress CMS" />
+      <meta name="author" content="Dias Jakupov, Matt Collison" />
+      <title>Building a Wordpress App</title>
+      <link rel="icon" type="image/x-icon" href="assets/img/UoE-favicon.jpg" />
+
+      <!-- Font Awesome icons (free version) REMOVED UNTIL SOCIALS ARE ADDED
+      <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+      -->
+      <!-- Google fonts-->
+      <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+
+      <!-- Core theme CSS (includes Bootstrap)-->
+      <link href="css/styles.css" rel="stylesheet" />
+  </head>
+    <body id="page-top">
+
+      <!-- Navigation-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">
+              <span class="d-block d-lg-none">Building a Wordpress Web App</span>
+              <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/app-unsplash.jpg" alt="Mobile app cover image" /></span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#intro">Intro</a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#step1">Step 1: Install Xampp</a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#step2">Step 2: Launch your Server Applications</a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#step3">Step 3: Create the Database</a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#step4">Step 4: Download Wordpress</a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#step5">Step 5: Install Wordpress</a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#step6">Step 6: Install and Configure Plugins and Themes</a></li>
+              </ul>
+          </div>
+      </nav>
+      <!-- Page Content-->
+      <div class="container-fluid p-0">
+
+          <!-- Intro-->
+          <section class="resume-section" id="intro">
+              <div class="resume-section-content">
+                  <h1 class="mb-0">
+                      Building a
+                      <span class="text-primary">Wordpress App</span>
+                  </h1>
+                  <div class="subheading mb-5">
+                      Authors: Dias Jakupov and Matt Collison <br />
+                      Contact: <a href="mailto:m.collison@exeter.ac.uk">m.collison@exeter.ac.uk</a>
+                  </div>
+                  <p class="lead mb-5">In this step-by-step tutorial, you'll install XAMPP and set up a local WordPress development site. The tutorial also shares some common XAMPP errors and troubleshooting tips so that you can fix any problems you encounter. </p>
+                  <p class="lead mb-5">The tutorial should take 90 minutes and assumes no prerequisite understanding. If you have any questions while attempting the tutorial please feel free to email Matt using the details above.</p>
+<!--                  <div class="social-icons">
+                      <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                      <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
+                      <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
+                      <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+                  </div>
+-->
+              </div>
+          </section>
+          <hr class="m-0" />
+
+
+          <!-- Step 1-->
+          <section class="resume-section" id="step1">
+              <div class="resume-section-content">
+                  <h2 class="mb-5">Step 1: Install Xampp</h2>
+                  <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                      <div class="flex-grow-1">
+                          <h3 class="mb-0"></h3>
+                          <div class="subheading mb-3">Download Xampp</div>
+
 <p>First step in the way is to download XAMPP on your computer: </p>
-<p><strong>Note:</strong> Windows users use this link: <a href="https://www.apachefriends.org/index.html">https://www.apachefriends.org/index.html</a></p>
-<p><strong>Note:</strong> MacOS users should use this link: <a href="https://sourceforge.net/projects/xampp/files/XAMPP%20Mac%20OS%20X/8.1.6/">https://sourceforge.net/projects/xampp/files/XAMPP%20Mac%20OS%20X/8.1.6/</a> and download xampp-osx-8.1.6-0-installer.dmg</p>
+<p><strong>Note:</strong> Windows users use this link: <a href="https://www.apachefriends.org/index.html" target="_blank">https://www.apachefriends.org/index.html</a></p>
+<p><strong>Note:</strong> MacOS users should use this link: <a href="https://sourceforge.net/projects/xampp/files/XAMPP%20Mac%20OS%20X/8.1.6/" target="_blank">https://sourceforge.net/projects/xampp/files/XAMPP%20Mac%20OS%20X/8.1.6/</a> and download xampp-osx-8.1.6-0-installer.dmg</p>
 <p>Once the download finishes, run the file to launch the XAMPP installer.</p>
-<h2 id="step-2-start-the-modules-and-test-your-server">Step 2: Start the modules and test your server</h2>
+
+                      </div>
+                      <!--<div class="flex-shrink-0"><span class="text-primary">10 minutes</span></div>-->
+                  </div>
+              </div>
+          </section>
+          <hr class="m-0" />
+
+
+          <!-- Step 2-->
+          <section class="resume-section" id="step2">
+              <div class="resume-section-content">
+                  <h2 class="mb-5">Step 2: Launch the Server Applications</h2>
+                  <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                      <div class="flex-grow-1">
+                          <h3 class="mb-0"></h3>
+                          <div class="subheading mb-3">Start the modules and test your server</div>
+
 <p>To run WordPress on XAMPP properly, you’ll need to run two modules:</p>
 <ul>
 <li>Apache</li>
 <li>MySQL</li>
 </ul>
 <p>For <strong>Windows</strong> users:</p>
-<p><img src="https://user-images.githubusercontent.com/75443246/171029459-b08b8e36-3047-447a-8595-39f269b958d7.png" alt="image"></p>
+<p><img src="./assets/img/step2-xampp-1.png" alt="xampp screenshot 1" width="80%"></p>
 <p>Once you launch them, you should see their status turn to green:</p>
-<p><img src="https://user-images.githubusercontent.com/75443246/171029605-0c0f010c-298a-417e-8b15-d27fdcbf3fd2.png" alt="image"></p>
+<p><img src="./assets/img/step2-xampp-2.png" alt="xampp screenshot 2" width="80%"></p>
 <p>For <strong>MacOS</strong> users:</p>
 <p>Click on Manage servers section and start Apache and MySQL services:</p>
-<p><img src="https://user-images.githubusercontent.com/75443246/172062019-fb5e0ff1-6849-49c3-866e-590ad46c2daf.png" alt="image"></p>
-<h2 id="step-2-navigate-to-your-local-service">Step 2: Navigate to your local service</h2>
-<p>Now you should be able to test that your local server is working by going to <a href="http://localhost/">http://localhost/</a>:</p>
-<p><img src="https://user-images.githubusercontent.com/75443246/171030234-83f069d1-7635-4c41-a1a2-8ae333d56e35.png" alt="image"></p>
-<h2 id="step-3-create-a-database-for-wordpress">Step 3: Create a database for WordPress</h2>
+<p><img src="./assets/img/step2-xampp-3.png" alt="xampp screenshot 3" width="80%"></p>
+
+<!--CREATE SUB SECTION CONTAINER -->
+<h2 id="step-2-navigate-to-your-local-service">Navigate to your local service</h2>
+<p>Now you should be able to test that your local server is working by going to <a href="http://localhost/" target="_blank">http://localhost/</a>:</p>
+<p><img src="./assets/img/step2-xampp-4.png" alt="xampp screenshot 4" width="80%"></p>
+                      </div>
+                      <!--<div class="flex-shrink-0"><span class="text-primary">10 minutes</span></div>-->
+                  </div>
+              </div>
+          </section>
+          <hr class="m-0" />
+
+
+          <!-- Step 3-->
+          <section class="resume-section" id="step3">
+              <div class="resume-section-content">
+                  <h2 class="mb-5">Step 3: Create the Database</h2>
+                  <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                      <div class="flex-grow-1">
+                          <h3 class="mb-0"></h3>
+                          <div class="subheading mb-3">Using phpmyadmin to create a database</div>
+
 <p>Next, you need to create a MySQL database for your WordPress. To do that, launch PHPMyAdmin from your XAMPP control panel:</p>
 <p><strong>Windows</strong> users:</p>
-<p><img src="https://user-images.githubusercontent.com/75443246/171030629-234b94b1-eea2-46f4-bc20-a6f3e58fdf56.png" alt="image"></p>
+<p><img src="./assets/img/step3-xampp-db-1.png" alt="Xampp database screenshot 1" width="80%"></p>
 <p><strong>MacOS</strong> users:
 Navigate to phpAdmin on your Dashboard page:</p>
-<p><img src="https://user-images.githubusercontent.com/75443246/172154947-bd5e8708-8ba1-4e8f-9362-ac29e7f94c64.png" alt="image"></p>
+<p><img src="./assets/img/step3-xampp-db-2.png" alt="Xampp database screenshot 2" width="80%"></p>
 <h3 id="if-you-get-phpmyadmin-access-forbidden-error-follow-these-steps-">If you get PhpMyAdmin Access Forbidden Error follow these steps:</h3>
 <ol>
 <li>Click Explorer button to open /opt/lampp</li>
 <li>Open etc/extra folder, edit httpd-xampp.conf file.</li>
-<li>Comment line which load Perl module.<pre><code><span class="hljs-comment">#LoadModule perl_module        modules/mod_perl.so</span>
-</code></pre></li>
-<li>Change Directory “/opt/lampp/phpmyadmin” access permission as below.<pre><code><span class="hljs-comment"># since XAMPP 1.4.3</span>
-<span class="hljs-section">&lt;Directory "/opt/lampp/phpmyadmin"&gt;</span>
- <span class="hljs-attribute">AllowOverride</span> AuthConfig Limit
- <span class="hljs-comment"># Require local</span>
- <span class="hljs-attribute"><span class="hljs-nomarkup">Order</span></span> allow,deny
- <span class="hljs-attribute"><span class="hljs-nomarkup">Allow</span></span> from <span class="hljs-literal">all</span>
- <span class="hljs-attribute">Require</span> <span class="hljs-literal">all</span> granted
- <span class="hljs-attribute"><span class="hljs-nomarkup">ErrorDocument</span></span> 403 /error/XAMPP_FORBIDDEN.html.var
-<span class="hljs-section">&lt;/Directory&gt;</span>
-</code></pre></li>
+<li>Comment line which load Perl module.</li>
+
+<pre><code>#LoadModule perl_module        modules/mod_perl.so</code></pre>
+
+<li>Change Directory “/opt/lampp/phpmyadmin” access permission as below.</li>
+
+<pre><code>
+  # since XAMPP 1.4.3
+  &lt;Directory "/opt/lampp/phpmyadmin"&gt;
+      AllowOverride AuthConfig Limit
+      # Require local
+      Order allow,deny
+      Allow from all
+      Require all granted
+      ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+  &lt;/Directory&gt;
+</code></pre>
 </ol>
 <p>Then click on Databases at the top:</p>
-<p><img src="https://user-images.githubusercontent.com/75443246/171031144-f516dbe0-ccde-42f8-b4a6-bd5fd8db8594.png" alt="image"></p>
+<p><img src="./assets/img/step3-xampp-db-3.png" alt="Xampp database screenshot 3" width="80%"></p>
 <p>And enter a name for your database and click Create. Your name can be anything (like Wordpress) – just remember it because you’ll need it for the next step:</p>
-<p><img src="https://user-images.githubusercontent.com/75443246/171031184-c7262d6e-163f-4ab2-a678-bf944914203d.png" alt="image"></p>
-<h2 id="step-4-download-and-add-wordpress-files">Step 4: Download and add Wordpress files</h2>
-<p>First, you need to download Wordpress archive on youe local PC: <a href="https://wordpress.org/download/">https://wordpress.org/download/</a></p>
+<p><img src="./assets/img/step3-xampp-db-4.png" alt="Xampp database screenshot 4" width="80%"></p>
+
+                      </div>
+                      <!--<div class="flex-shrink-0"><span class="text-primary">10 minutes</span></div>-->
+                  </div>
+              </div>
+          </section>
+          <hr class="m-0" />
+
+
+          <!-- Step 4-->
+          <section class="resume-section" id="step4">
+              <div class="resume-section-content">
+                  <h2 class="mb-5">Step 4: Download Wordpress</h2>
+                  <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                      <div class="flex-grow-1">
+                          <h3 class="mb-0"></h3>
+                          <div class="subheading mb-3">Download and add Wordpress files</div>
+
+<p>First, you need to download Wordpress on your local computer. Follow the link and scroll to the Download Wordpress button: <a href="https://wordpress.org/download/" target="_blank">https://wordpress.org/download/</a></p>
 <p>Now you need to open file directory of your server:</p>
 <ul>
 <li>Click &quot;Explorer&quot; or &quot;Open Application folder&quot; button in Xampp to open /opt/lampp</li>
-<li>Then open htdocs directory and create new folder (name it <strong>wordpress</strong>). Copy all unarchived Wordpress files to the new folder.<h2 id="step-5-install-wordpress-locally-via-the-on-screen-installer">Step 5: Install WordPress locally via the on-screen installer</h2>
-Now open your Wordpress site, which is:</li>
+<li>Then open htdocs directory and create new folder (name it <strong>wordpress</strong>). Copy all unarchived Wordpress files to the new folder. Wordpress is built with php so as soon as the wordpress files are in this directory the site is live and just needs configuring. </li>
 </ul>
-<p><a href="http://localhost/wordpress">http://localhost/wordpress</a></p>
+
+                      </div>
+                      <!--<div class="flex-shrink-0"><span class="text-primary">10 minutes</span></div>-->
+                  </div>
+              </div>
+          </section>
+          <hr class="m-0" />
+
+
+          <!-- Step 5-->
+          <section class="resume-section" id="step5">
+              <div class="resume-section-content">
+                  <h2 class="mb-5">Step 5: Install Wordpress</h2>
+                  <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                      <div class="flex-grow-1">
+                          <h3 class="mb-0"></h3>
+                          <div class="subheading mb-3">Configure your Wordpress web app</div>
+
+<p>Now open your Wordpress site, which is:
+<a href="http://localhost/wordpress">http://localhost/wordpress</a></p>
 <p>The only step where this process will differ from a normal install is the database details. When you get to the database details, enter them like this:</p>
 <ul>
 <li>Database Name = Name of the database you created in PHPMyAdmin (Step 3)</li>
 <li>Username = “root”</li>
 <li>Password = leave blank</li>
 </ul>
-<p><img src="https://user-images.githubusercontent.com/75443246/171044639-0204cb55-9509-409f-a0c1-4295f50f7eba.png" alt="image"></p>
-<h2 id="step-6-set-up-your-wordpress-database-and-account">Step 6: Set up your Wordpress database and account</h2>
+<p><img src="./assets/img/step4-wordpress-1.png" alt="Wordpress screenshot 1" width="80%"></p>
+
+<h2 id="step-6-set-up-your-wordpress-database-and-account">Set up your Wordpress database and account</h2>
 <p>If you see this screen, everything is going as planned!</p>
-<p><img src="https://user-images.githubusercontent.com/75443246/171045337-422dd27e-8e0c-42c0-95db-80a846e6fe2d.png" alt="image"></p>
+<p><img src="./assets/img/step4-wordpress-2.png" alt="Wordpress screenshot 2" width="80%"></p>
 <p>Now go to htdocs/wordpress folder and change the name of &#39;wp-config-sample.php&#39; to &#39;wp-config.php&#39;. Copy all the text generated by Wordpress and replace the content of &#39;wp-config.php&#39;. </p>
 <p>Click &quot;Run the installation&quot;</p>
 <p>Then create your new Wordpress account and name your new Website:</p>
-<p><img src="https://user-images.githubusercontent.com/75443246/171046027-8fb0e52a-1c88-43ce-94ee-748bebe371ca.png" alt="image"></p>
-<h2 id="step-7-test-the-features-of-the-wordpress">Step 7: Test the features of the Wordpress</h2>
-<h2 id="step-8-optional-download-plugins-and-themes">Step 8: (Optional) Download Plugins and Themes</h2>
+<p><img src="./assets/img/step4-wordpress-3.png" alt="Wordpress screenshot 3" width="80%"></p>
+
+                      </div>
+                      <!--<div class="flex-shrink-0"><span class="text-primary">10 minutes</span></div>-->
+                  </div>
+              </div>
+          </section>
+          <hr class="m-0" />
+
+
+          <!-- Step 6-->
+          <section class="resume-section" id="step6">
+              <div class="resume-section-content">
+                  <h2 class="mb-5">Step 6: Install and Configure Plugins and Themes</h2>
+                  <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                      <div class="flex-grow-1">
+                          <h3 class="mb-0"></h3>
+                          <div class="subheading mb-3">Use the plugins and themes to customise your app. </div>
+
 <ol>
 <li>Click &quot;Explorer&quot; or &quot;Open Application folder&quot; button to open /opt/lampp</li>
 <li>Navigate to htdocs/wordpress and open wp-config.php</li>
@@ -82,6 +249,23 @@ Now open your Wordpress site, which is:</li>
 <li>Go to htdocs directory, right click on wordpress folder and click on &quot;Get Info&quot;</li>
 <li>Change the privilages to &quot;Read and write&quot; and apply to all enclosed items</li>
 </ol>
-<p><img src="https://user-images.githubusercontent.com/75443246/172061973-03652571-7d6c-43c1-9011-ee30a957d290.png" alt="image"></p>
+<p><img src="./assets/img/step5-wordpress-1.png" alt="Wordpress plugin screenshot"></p>
 <p>You can now install plugins and themes to make your Web development easier and user-friendly.</p>
 <p>Try and install Storefront theme with the combination of WooCommerce plugin!</p>
+
+
+                      </div>
+                      <!--<div class="flex-shrink-0"><span class="text-primary">10 minutes</span></div>-->
+                  </div>
+              </div>
+          </section>
+
+        </div>
+
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<!-- Bootstrap js import -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>
